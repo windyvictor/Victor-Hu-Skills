@@ -6,7 +6,7 @@
 > 覆盖 **读文献 → 想问题 → 做研究 → 写论文 → 报项目 → 建知识库** 的完整闭环，
 > 并附带公文职场写作与通识思维工具箱。
 
-本仓库共收录 **13 个 Skill**，以中文为主，遵循通用的 `SKILL.md + references/` 目录规范，
+本仓库共收录 **14 个 Skill**，以中文为主，遵循通用的 `SKILL.md + references/` 目录规范，
 理论上可用于任何支持该规范的 Agent 平台（WorkBuddy / Claude Code / Codex 等）。
 
 ---
@@ -63,7 +63,7 @@
 
 | Skill | 一句话定位 | 核心内容 |
 |---|---|---|
-| [research-copilot](./research-copilot/README.md) | 严谨**科研协作**总入口 | 数学证明与理论推导、论文写作与审阅、文献调研、创新性分析、选题与方法设计、算法与数值实验、LaTeX |
+| [research-copilot](./research-copilot/README.md) | 严谨**科研协作**总入口 | 数学证明与理论推导、论文写作与审阅、文献调研、创新性分析、选题与方法设计、算法与数值实验、LaTeX；v2 新增受控语言层（ASD-STE100 科研适配版 + 中英稿件检查脚本） |
 | [graduate-research-career](./graduate-research-career/README.md) | **硕博生涯与学术职业**指导 | 提炼自 20 部科研指南：入学适应、选题、读文献、科研习惯、写作发表、导师关系、学术诚信、职业选择，附 6 份可填模板 |
 
 ### D. 职场写作与通用思维
@@ -73,6 +73,7 @@
 | [ai-gongwen-writing](./ai-gongwen-writing/README.md) | **公文与职场写作**技能库 | 20+ 公文文种（通知/通报/会议纪要/请示/总结/调研报告/领导讲话…）与职场文体（周报/复盘/申请/公开发言/年终总结），各含写作公式 + 分步提示词 + 成稿自检 |
 | [modern-thinking-toolkit](./modern-thinking-toolkit/README.md) | **现代思维工具箱**（约 320 个模型） | 决策算法、博弈论、概率与贝叶斯、批判性思维、系统思维、角色思维、认知成长等，自动选 1 主 + ≤3 辅工具输出结论、机制、权衡与行动 |
 | [human-3-skill](./human-3-skill/README.md) | **HUMAN 3.0** 个人发展评估 | 通过适应式面谈，从心智 / 身体 / 灵性 / 职业四象限识别发展层级、生活方式原型、跨象限阻碍与成长策略 |
+| [output-escalation](./output-escalation/README.md) | **输出升维阶梯**——为消息选最省读者力气的介质 | 五级阶梯（受控文字 → 图表 → 交互网页 → 讲解视频 → 可丢弃小工具）+ 升维/降级判据；内置 ASD-STE100 受控英语 Issue 9 完整实现（53 条规则 + 受控词典 + 检查脚本） |
 
 ---
 
@@ -91,6 +92,8 @@
 | 数学证明、推导、创新点分析、算法实验 | `research-copilot` |
 | 研究生阶段迷茫：选题、导师关系、要不要读博 | `graduate-research-career` |
 | 写通知、总结、会议纪要、述职报告 | `ai-gongwen-writing` |
+| 把复杂的东西讲清楚：画图、做交互网页、做讲解视频 | `output-escalation` |
+| 写操作手册 / SOP / 安全规程，或检查稿件语言质量 | `output-escalation`（受控语言）+ `research-copilot`（语言体检脚本） |
 | 做复杂决策、分析一个乱局、找思维模型 | `modern-thinking-toolkit` |
 | 想系统复盘自己的生活在哪个象限出问题 | `human-3-skill` |
 
@@ -149,7 +152,8 @@ cp -r <仓库名>/research-paper-writing <你的项目>/.workbuddy/skills/
 ├── graduate-research-career/
 ├── ai-gongwen-writing/
 ├── modern-thinking-toolkit/
-└── human-3-skill/
+├── human-3-skill/
+└── output-escalation/
 ```
 
 ---
@@ -185,7 +189,7 @@ cp -r <仓库名>/research-paper-writing <你的项目>/.workbuddy/skills/
 
 | 类型 | 说明 | 举例 |
 |---|---|---|
-| **① 提炼改写**（主体） | 方法要点的重新表述与结构重组，非原文照搬 | 各 Skill 的流程、规则、checklist |
+| **① 提炼改写**（主体） | 方法要点的重新表述与结构重组，非原文照搬 | 各 Skill 的流程、规则、checklist；`output-escalation` / `research-copilot` 对 ASD-STE100 受控语言的功能性提炼 |
 | **② 原文引用**（均已标注来源） | 为保留原味或功能而保留的原句、提示词模板、句式库 | `modern-thinking-toolkit` 的「金句（第 N 讲）」、`academic-paper-prompts` 的提示词模板、`research-paper-writing` 的学术句式 |
 | **③ 已知受版权约束的第三方素材** | 来源方明确限制再分发的素材，仓库已作显著提示 | `research-paper-writing` 引用的 *Academic Phrasebank*（曼彻斯特大学，仅授权个人使用、禁止电子再分发） |
 

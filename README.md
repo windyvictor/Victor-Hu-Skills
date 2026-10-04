@@ -6,7 +6,7 @@
 > It covers a complete loop — **read papers → think through problems → do research → write papers → apply for funding → build a knowledge base** —
 > plus official-document writing and a general thinking toolkit.
 
-This repository contains **13 Skills**, primarily written in Chinese, following the common
+This repository contains **14 Skills**, primarily written in Chinese, following the common
 `SKILL.md + references/` layout. In principle they work on any Agent platform that supports
 this convention (WorkBuddy, Claude Code, Codex, and others).
 
@@ -69,7 +69,7 @@ These Skills share three characteristics:
 
 | Skill | One-line positioning | Core content |
 |---|---|---|
-| [research-copilot](./research-copilot/README.md) | A rigorous **research collaboration** entry point | Mathematical proofs and derivations, paper writing and review, literature surveys, novelty analysis, topic selection and method design, algorithms and numerical experiments, LaTeX |
+| [research-copilot](./research-copilot/README.md) | A rigorous **research collaboration** entry point | Mathematical proofs and derivations, paper writing and review, literature surveys, novelty analysis, topic selection and method design, algorithms and numerical experiments, LaTeX; v2 adds a controlled-language layer (ASD-STE100 research-adapted edition + Chinese/English manuscript check scripts) |
 | [graduate-research-career](./graduate-research-career/README.md) | Guidance for **graduate study and academic careers** | Distilled from 20 research guides: onboarding, topic selection, reading literature, research habits, writing and publishing, advisor relations, research integrity, career choices; includes 6 fillable templates |
 
 ### D. Workplace writing and general thinking
@@ -79,6 +79,7 @@ These Skills share three characteristics:
 | [ai-gongwen-writing](./ai-gongwen-writing/README.md) | A **Chinese official-document and workplace writing** library | 20+ official document types (notices, bulletins, meeting minutes, requests for instructions, summaries, research reports, leadership speeches…) and workplace genres (weekly reports, retrospectives, applications, public remarks, annual reviews); each with a writing formula + step-by-step prompts + final-draft self-check |
 | [modern-thinking-toolkit](./modern-thinking-toolkit/README.md) | A **modern thinking toolkit** (~320 models) | Decision algorithms, game theory, probability and Bayes, critical thinking, systems thinking, role-based mindsets, cognitive growth; automatically picks 1 primary and up to 3 supporting/counter tools and outputs conclusions, mechanisms, trade-offs, and actions |
 | [human-3-skill](./human-3-skill/README.md) | **HUMAN 3.0** personal development assessment | Through an adaptive interview, identifies development levels, lifestyle archetypes, cross-quadrant obstacles, and growth strategies across the mind / body / spirit / career quadrants |
+| [output-escalation](./output-escalation/README.md) | An **output escalation ladder** — pick the medium that costs the reader the least effort | Five rungs (controlled writing → diagrams → interactive HTML explainer → explainer video → discardable tool) + escalation/de-escalation criteria; includes a complete implementation of ASD-STE100 Simplified Technical English Issue 9 (53 rules + controlled dictionary + check scripts) |
 
 ---
 
@@ -97,6 +98,8 @@ These Skills share three characteristics:
 | Mathematical proofs, derivations, novelty analysis, algorithm experiments | `research-copilot` |
 | I'm a grad student feeling lost: topics, advisor relations, whether to do a PhD | `graduate-research-career` |
 | Write a notice, summary, meeting minutes, or work report | `ai-gongwen-writing` |
+| Explain something complex clearly: diagrams, an interactive webpage, an explainer video | `output-escalation` |
+| Write an operations manual / SOP / safety instructions, or check manuscript language quality | `output-escalation` (controlled language) + `research-copilot` (language check scripts) |
 | Make a complex decision, analyze a messy situation, find a mental model | `modern-thinking-toolkit` |
 | Systematically review which quadrant of my life is off track | `human-3-skill` |
 
@@ -157,7 +160,8 @@ a literature review").
 ├── graduate-research-career/
 ├── ai-gongwen-writing/
 ├── modern-thinking-toolkit/
-└── human-3-skill/
+├── human-3-skill/
+└── output-escalation/
 ```
 
 ---
@@ -195,7 +199,7 @@ efficiency.
 
 | Category | Description | Examples |
 |---|---|---|
-| **① Distilled / rewritten** (the bulk) | Restatement and structural reorganization of key methods, not verbatim copying | The flows, rules, and checklists of each Skill |
+| **① Distilled / rewritten** (the bulk) | Restatement and structural reorganization of key methods, not verbatim copying | The flows, rules, and checklists of each Skill; the functional distillation of ASD-STE100 controlled English in `output-escalation` / `research-copilot` |
 | **② Verbatim quotations** (all sources cited) | Original sentences, prompt templates, or phrase banks kept for authenticity or functionality | The "金句 (Lecture N)" quotes in `modern-thinking-toolkit`; the prompt templates in `academic-paper-prompts`; the academic phrase bank in `research-paper-writing` |
 | **③ Third-party material under known copyright constraints** | Material whose owners explicitly restrict redistribution; such files carry prominent notices | *Academic Phrasebank* cited in `research-paper-writing` (University of Manchester — personal use only, electronic redistribution prohibited) |
 
