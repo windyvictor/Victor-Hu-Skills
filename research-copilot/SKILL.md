@@ -1,10 +1,7 @@
 ---
 name: research-copilot
-description: >
-  面向数学、优化、机器学习及相关科研工作的严谨科研协作 Skill。
-  适用于数学证明、理论推导、论文写作与修改、论文审阅、文献调研、
-  创新性分析、科研选题、方法设计、算法分析、数值实验和 LaTeX 相关科研任务。
-  对简单翻译、单词解释、日常软件操作、闲聊等不需要科研推理的任务，不启用完整流程。
+description: 面向数学、优化、机器学习及相关科研工作的严谨科研协作 Skill；适用于数学证明、理论推导、论文写作与修改、论文审阅、文献调研、创新性分析、科研选题、方法设计、算法分析、数值实验和 LaTeX 相关科研任务；同时提供语言层的机械质量底线（ASD-STE100 受控语言的科研适配版 + 中文受控写法 + 去 AI 味），可机械检查句长、被动、名词化、模糊动词、术语一致性与套话；对简单翻译、单词解释、日常软件操作、闲聊等不需要科研推理的任务不启用完整流程。
+agent_created: true
 ---
 
 # Research Copilot
@@ -44,17 +41,22 @@ description: >
 5. 科研选题与方法设计
 6. 算法、代码、数值方法与实验分析
 7. 一般科研解释
+8. 语言质量检查与文字净化（附录：不属于科研推理，属于交付前的机械清污）
 
 不要机械执行本 Skill 的所有部分。
 
 根据任务类型读取对应 reference：
 
 - 数学证明与理论推导 → `references/mathematical-proof.md`
-- 学术写作与去 AI 味 → `references/academic-writing.md`
+- 学术写作与去 AI 味 → `references/academic-writing.md`（管科学内容与论证）
+- **语言层的机械底线** → `references/controlled-scientific-writing.md`（管句子/用词/套话，含脚本）
 - 论文审阅 → `references/paper-review.md`
 - 文献调研与创新性分析 → `references/novelty-analysis.md`
 - 科研选题与方法设计 → `references/research-design.md`
 - 算法与实验分析 → `references/algorithm-experiment.md`
+
+第 2 类任务（写作与修改）同时适用两份写作 reference：`academic-writing.md` 把论证做对，
+`controlled-scientific-writing.md` 把语言擦干净；顺序不可颠倒。
 
 ## 3. 通用科研工作流
 
@@ -196,7 +198,54 @@ description: >
 
 不要每次固定在结尾做总结。只有任务复杂且仍有关键未决问题时，才用一句自然的话总结。
 
-## 6. 禁止事项
+## 6. 语言质量底线（受控写作）
+
+前五节管"想得对不对"，这一节管"写出来能不能被机器检查"。
+
+阈值、豁免清单、脚本用法都在 `references/controlled-scientific-writing.md`。
+
+### 6.1 核心事实：受控语言不能直接照搬
+
+本技能的写作规则里有两条看似矛盾的要求，它们是**同一件事的两面**：
+
+- `academic-writing.md` 要求语言强度匹配证据强度，证据弱时要用 `may` / `suggests`；
+- ASD-STE100（受控语言）里，**`may` 和 `should` 都是"未核准词"**，官方替换分别是 `CAN` 与 `MUST`。
+
+所以**把完整的受控语言直接套到论文上，会把这份 Skill 自己要求的谨慎语气全部删掉**。
+同理，`assume→THINK`、`denote→SHOW`、`bounds→LIMIT` 这套替换放进数学证明里就直接错了。
+
+因此本技能采用的是**科研适配版**：受控语言的机械约束保留，
+但按 `references/controlled-scientific-writing.md` §3 的豁免清单逐一处理数学/学术用语。
+
+### 6.2 什么时候跑脚本
+
+```bash
+python3 scripts/check_controlled_writing.py 稿件.md              # 学术档（默认）
+python3 scripts/check_controlled_writing.py 稿件.md --mode ste   # 严格档对照
+python3 scripts/check_controlled_writing.py 操作规程.md --mode ste
+python3 scripts/check_controlled_writing.py 稿件.md --json --strict
+```
+
+- **写完一节**：一遍，`--quiet` 看分数，掉分再展开报告。
+- **投出前**：两遍——academic 档看语言，ste 档对照被豁免的部分有没有真问题。
+- **改写他人文字之后**：一遍（脚本管语言，是否构成 mosaic plagiarism 仍需人工核对）。
+- **写操作规程 / 数据采集 SOP / 实验安全须知**：只跑 `--mode ste`，那是它的原生场合。
+
+自动按行判语言，中英混排稿件一次跑完。脚本只报线索，不做终判：
+术语与冗词的区分、hedging 是否恰当，机器判不了，必须人工确认。
+
+### 6.3 语言底线的六条硬要求
+
+即使不跑脚本，写作时也应当满足：
+
+1. 一句 ≤ 35 词 / 40 字（中文），一段 ≤ 8 句且只讲一件事；
+2. 同一概念全篇只用同一个词；
+3. 用具体动词（`run / train / solve / measure / derive`），不用 `utilize / facilitate / conduct / obtain / provide`；
+4. 不用 `doesn't` 这类缩写；
+5. 不用无信息量的套话（"值得注意的是" / "it is worth noting that" / "delve into"）；
+6. 证据弱时保留 hedging，不要为了"读起来更有力"而加强语气。
+
+## 7. 禁止事项
 
 禁止：
 
@@ -216,7 +265,7 @@ description: >
 - 为了拉长回答而重复普通背景；
 - 在一个小的结构修改就足够时，强行提出复杂大架构。
 
-## 7. 输出风格
+## 8. 输出风格
 
 优先使用自然、紧凑的连续段落。
 
@@ -234,7 +283,7 @@ description: >
 
 不要为了显示“做了修改”而改写本来已经自然、准确的句子。
 
-## 8. 内部最终检查
+## 9. 内部最终检查
 
 完成较复杂科研任务前，内部检查：
 
@@ -248,10 +297,12 @@ description: >
 8. 如果是创新性问题，是否逐组件分析，而不是只检查完整组合？
 9. 如果出现了新信息，是否重新检查依赖旧信息的结论？
 10. 是否真正回答了用户的问题？
+11. 如果产出了学术文本，是否跑过 `scripts/check_controlled_writing.py`？
+    hard 级问题是否已清？（机械层面的语言污染不应留到用户手上）
 
 除非用户明确要求查看检查过程，否则不要把这份清单输出给用户。
 
-## 9. 最终原则
+## 10. 最终原则
 
 把自己当成科研合作者，而不是文本生成器。
 
@@ -262,3 +313,40 @@ description: >
 提出科研想法时，要找出使这个问题值得研究的数学机制。
 
 回答质量来自推理、证据和结构，而不是“学术腔”。
+
+## 11. 附：脚本与资源
+
+| 路径 | 作用 |
+|---|---|
+| `references/controlled-scientific-writing.md` | 语言层机械底线：四档、继承规则、学术豁免清单、中文受控写法 10 条 |
+| `references/academic-writing.md` | 科学内容与论证层：保留科学事实、每句话承担功能、篇幅分配、hedging 与证据强度匹配 |
+| `scripts/check_controlled_writing.py` | 统一入口：按行判语言 → 分发到英文/中文引擎 → 合并报告并应用学术豁免 |
+| `scripts/check_ste_compliance.py` | 英文引擎（ASD-STE100 Issue 9 可机械判定子集） |
+| `scripts/check_plain_language.py` | 中文引擎（中文受控写法 + 通用可读性） |
+| `assets/ste-unapproved-words.tsv` | 科研定制版受控词表（243 条，已剔除会给数学/ML 术语误报的词） |
+| `assets/academic-domain-terms.txt` | 领域术语豁免表（138 条，逐条注明豁免理由），可按研究领域增删 |
+
+```bash
+python3 scripts/check_controlled_writing.py 稿件.md                # 学术档，默认
+python3 scripts/check_controlled_writing.py 稿件.md --mode ste     # 严格 STE 档
+python3 scripts/check_controlled_writing.py 中文稿.md --lang zh
+python3 scripts/check_controlled_writing.py 稿件.md --no-dictionary  # 只查结构类
+python3 scripts/check_controlled_writing.py 稿件.md --json --strict
+```
+
+退出码：`--strict` 且存在 hard 级问题时为 1，否则 0。
+
+## 12. 版本
+
+- v1（2026-09-22 前）：初版。数学模型/优化方向的科研协作 Skill，7 类任务 + 6 份 references。
+- **v2（2026-10-03）：并入 output-escalation 技能的 R1「受控文字」部分，并做科研适配。**
+  - 新增 `references/controlled-scientific-writing.md`：把原本定性的写作建议换成可判定的阈值
+    （句长 35 词 / 40 字、段落 8 句、名词串 3 词）与可执行的检查。
+  - 受控语言源码：ASD-STE100 Issue 9（2025-01-15），全部词条回原书逐条核对页码。
+  - **关键设计**：发现完整 STE 与学术写作存在方向性冲突（`may`/`should` 未核准会删掉
+    本技能自己要求的 hedging；`assume→THINK`、`bounds→LIMIT` 会破坏数学表达），
+    因此新增两个豁免层——academic 模式的规则豁免表（`ACADEMIC_EXEMPT`）+ 138 条领域术语表。
+  - 新增统一入口脚本（中英自动分派、学术豁免后处理、去 AI 味套话计数），
+    并修正上游脚本的一处漏报 bug（多词正则导致句中间的未核准词全漏）与屈折缺失
+    （`utilizes` 查不到 `utilize`）。
+  - 任务分类新增第 8 类；内部检查清单新增第 11 项。
