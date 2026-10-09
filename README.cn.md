@@ -9,6 +9,9 @@
 本仓库共收录 **14 个 Skill**，以中文为主，遵循通用的 `SKILL.md + references/` 目录规范，
 理论上可用于任何支持该规范的 Agent 平台（WorkBuddy / Claude Code / Codex 等）。
 
+根目录另有一份 `SKILL.md`，它是**合集总控（router）**：本身不含写作规则，只负责按任务把
+Agent 路由到 `skills/` 下对应的子技能。因此本仓库既可整包使用，也可只取其中单个技能。
+
 ---
 
 ## 目录
@@ -45,35 +48,35 @@
 
 | Skill | 一句话定位 | 核心内容 |
 |---|---|---|
-| [research-paper-writing](./research-paper-writing/README.md) | 论文写作与文献综述**全流程**主力技能 | 检索筛选 → 批判精读 → 综述撰写 → 选题 Idea → 逐节写作（引言/摘要/方法/实验/相关工作/结论）→ 投稿自审 → 答辩，附真实范例库与稿件自检脚本 |
-| [academic-deai-writing](./academic-deai-writing/README.md) | 去除论文与申报书的 **AI 味 / AIGC 痕迹** | 根因诊断、通用改写、套话清理、篇幅重分配，以及 Introduction/Results/Discussion/创新点分章节专项处理与英文改写 |
-| [academic-paper-prompts](./academic-paper-prompts/README.md) | 论文写作 **提示词库**（拿来即用） | 40 套覆盖全流程的提示词方案 + 30 条英文写作高级指令，模板原文保留变量占位符 |
-| [grant-proposal-ai](./grant-proposal-ai/README.md) | **课题 / 基金申报书**写作指南 | 申报书各部分（立项依据、研究内容、技术路线、创新点、可行性、预算）写作要领 + 40 个结构化提示词模板 |
-| [ai-research-methodology](./ai-research-methodology/README.md) | 用 AI 做科研的 **方法论与工具选型** | 文献检索、选题趋势、数据处理、实验设计与创新点挖掘、统计建模、图表生成、投稿返修；分理工科 / 文科两套黄金提示词 |
+| [research-paper-writing](./skills/research-paper-writing/README.md) | 论文写作与文献综述**全流程**主力技能 | 检索筛选 → 批判精读 → 综述撰写 → 选题 Idea → 逐节写作（引言/摘要/方法/实验/相关工作/结论）→ 投稿自审 → 答辩，附真实范例库与稿件自检脚本 |
+| [academic-deai-writing](./skills/academic-deai-writing/README.md) | 去除论文与申报书的 **AI 味 / AIGC 痕迹** | 根因诊断、通用改写、套话清理、篇幅重分配，以及 Introduction/Results/Discussion/创新点分章节专项处理与英文改写 |
+| [academic-paper-prompts](./skills/academic-paper-prompts/README.md) | 论文写作 **提示词库**（拿来即用） | 40 套覆盖全流程的提示词方案 + 30 条英文写作高级指令，模板原文保留变量占位符 |
+| [grant-proposal-ai](./skills/grant-proposal-ai/README.md) | **课题 / 基金申报书**写作指南 | 申报书各部分（立项依据、研究内容、技术路线、创新点、可行性、预算）写作要领 + 40 个结构化提示词模板 |
+| [ai-research-methodology](./skills/ai-research-methodology/README.md) | 用 AI 做科研的 **方法论与工具选型** | 文献检索、选题趋势、数据处理、实验设计与创新点挖掘、统计建模、图表生成、投稿返修；分理工科 / 文科两套黄金提示词 |
 
 ### B. 文献阅读与知识管理
 
 | Skill | 一句话定位 | 核心内容 |
 |---|---|---|
-| [critical-paper-reading](./critical-paper-reading/README.md) | **批判性精读**单篇 / 多篇论文 | Keshav 三遍法 + 结构化要素提取 + 批判性思维引擎（质疑清单、论证评估、研究空白识别），输出结构化阅读报告 |
-| [socratic-reading](./socratic-reading/README.md) | 用**苏格拉底提问法**读一本书 | 艾德勒四层次阅读（基础/检视/分析/主题）+ 四个基本问题追问链 + 选书与速读产出法 |
-| [zettelkasten-notes](./zettelkasten-notes/README.md) | **卡片盒笔记法**（Zettelkasten） | 闪念 → 文献 → 永久笔记 + 连接 + 索引 + 回顾，解决「记了很多笔记却写不出东西」 |
+| [critical-paper-reading](./skills/critical-paper-reading/README.md) | **批判性精读**单篇 / 多篇论文 | Keshav 三遍法 + 结构化要素提取 + 批判性思维引擎（质疑清单、论证评估、研究空白识别），输出结构化阅读报告 |
+| [socratic-reading](./skills/socratic-reading/README.md) | 用**苏格拉底提问法**读一本书 | 艾德勒四层次阅读（基础/检视/分析/主题）+ 四个基本问题追问链 + 选书与速读产出法 |
+| [zettelkasten-notes](./skills/zettelkasten-notes/README.md) | **卡片盒笔记法**（Zettelkasten） | 闪念 → 文献 → 永久笔记 + 连接 + 索引 + 回顾，解决「记了很多笔记却写不出东西」 |
 
 ### C. 科研协作与生涯发展
 
 | Skill | 一句话定位 | 核心内容 |
 |---|---|---|
-| [research-copilot](./research-copilot/README.md) | 严谨**科研协作**总入口 | 数学证明与理论推导、论文写作与审阅、文献调研、创新性分析、选题与方法设计、算法与数值实验、LaTeX；v2 新增受控语言层（ASD-STE100 科研适配版 + 中英稿件检查脚本） |
-| [graduate-research-career](./graduate-research-career/README.md) | **硕博生涯与学术职业**指导 | 提炼自 20 部科研指南：入学适应、选题、读文献、科研习惯、写作发表、导师关系、学术诚信、职业选择，附 6 份可填模板 |
+| [research-copilot](./skills/research-copilot/README.md) | 严谨**科研协作**总入口 | 数学证明与理论推导、论文写作与审阅、文献调研、创新性分析、选题与方法设计、算法与数值实验、LaTeX；v2 新增受控语言层（ASD-STE100 科研适配版 + 中英稿件检查脚本） |
+| [graduate-research-career](./skills/graduate-research-career/README.md) | **硕博生涯与学术职业**指导 | 提炼自 20 部科研指南：入学适应、选题、读文献、科研习惯、写作发表、导师关系、学术诚信、职业选择，附 6 份可填模板 |
 
 ### D. 职场写作与通用思维
 
 | Skill | 一句话定位 | 核心内容 |
 |---|---|---|
-| [ai-gongwen-writing](./ai-gongwen-writing/README.md) | **公文与职场写作**技能库 | 20+ 公文文种（通知/通报/会议纪要/请示/总结/调研报告/领导讲话…）与职场文体（周报/复盘/申请/公开发言/年终总结），各含写作公式 + 分步提示词 + 成稿自检 |
-| [modern-thinking-toolkit](./modern-thinking-toolkit/README.md) | **现代思维工具箱**（约 320 个模型） | 决策算法、博弈论、概率与贝叶斯、批判性思维、系统思维、角色思维、认知成长等，自动选 1 主 + ≤3 辅工具输出结论、机制、权衡与行动 |
-| [human-3-skill](./human-3-skill/README.md) | **HUMAN 3.0** 个人发展评估 | 通过适应式面谈，从心智 / 身体 / 灵性 / 职业四象限识别发展层级、生活方式原型、跨象限阻碍与成长策略 |
-| [output-escalation](./output-escalation/README.md) | **输出升维阶梯**——为消息选最省读者力气的介质 | 五级阶梯（受控文字 → 图表 → 交互网页 → 讲解视频 → 可丢弃小工具）+ 升维/降级判据；内置 ASD-STE100 受控英语 Issue 9 完整实现（53 条规则 + 受控词典 + 检查脚本） |
+| [ai-gongwen-writing](./skills/ai-gongwen-writing/README.md) | **公文与职场写作**技能库 | 20+ 公文文种（通知/通报/会议纪要/请示/总结/调研报告/领导讲话…）与职场文体（周报/复盘/申请/公开发言/年终总结），各含写作公式 + 分步提示词 + 成稿自检 |
+| [modern-thinking-toolkit](./skills/modern-thinking-toolkit/README.md) | **现代思维工具箱**（约 320 个模型） | 决策算法、博弈论、概率与贝叶斯、批判性思维、系统思维、角色思维、认知成长等，自动选 1 主 + ≤3 辅工具输出结论、机制、权衡与行动 |
+| [human-3-skill](./skills/human-3-skill/README.md) | **HUMAN 3.0** 个人发展评估 | 通过适应式面谈，从心智 / 身体 / 灵性 / 职业四象限识别发展层级、生活方式原型、跨象限阻碍与成长策略 |
+| [output-escalation](./skills/output-escalation/README.md) | **输出升维阶梯**——为消息选最省读者力气的介质 | 五级阶梯（受控文字 → 图表 → 交互网页 → 讲解视频 → 可丢弃小工具）+ 升维/降级判据；内置 ASD-STE100 受控英语 Issue 9 完整实现（53 条规则 + 受控词典 + 检查脚本） |
 
 ---
 
@@ -103,28 +106,40 @@
 
 每个 Skill 都是自包含的独立目录，直接复制即可使用。
 
-**方式一：全局安装（推荐，所有项目可用）**
+**方式一：整包安装（一次装齐 14 个技能）**
+
+```bash
+git clone https://github.com/<你的用户名>/<仓库名>.git
+cp -r <仓库名> ~/.workbuddy/skills/research-skillbox
+```
+
+根目录的 `SKILL.md` 是合集总控，`skills/` 下是 14 个子技能。平台先加载总控，再下探 `skills/`
+子目录，把 14 个子技能一并注册。
+
+**方式二：单技能安装（全局，所有项目可用）**
 
 ```bash
 git clone https://github.com/<你的用户名>/<仓库名>.git
 
 # 把需要的 skill 目录复制到用户级 skills 目录
-cp -r <仓库名>/research-paper-writing ~/.workbuddy/skills/
-cp -r <仓库名>/critical-paper-reading  ~/.workbuddy/skills/
+cp -r <仓库名>/skills/research-paper-writing ~/.workbuddy/skills/
+cp -r <仓库名>/skills/critical-paper-reading  ~/.workbuddy/skills/
 # ……按需复制
 ```
 
-**方式二：项目级安装（只在本项目生效，便于团队共享）**
+**方式三：项目级安装（只在本项目生效，便于团队共享）**
 
 ```bash
 mkdir -p <你的项目>/.workbuddy/skills
-cp -r <仓库名>/research-paper-writing <你的项目>/.workbuddy/skills/
+cp -r <仓库名>/skills/research-paper-writing <你的项目>/.workbuddy/skills/
 ```
 
 安装后重启 Agent 或重新载入技能，即可在对话中自动触发，或显式点名调用
 （如「用 research-paper-writing 帮我写文献综述」）。
 
 > 目录规范：`SKILL.md` 为入口，`references/` 为知识分片，`assets/` 为模板，`scripts/` 为脚本。
+> **整包安装时，子技能统一放在 `skills/` 子目录**：多数平台在目录含 `SKILL.md` 时只下探
+> `skills/`，不会扫描同级其他目录，放在这一层才能被子技能被自动注册。
 > 如果你的平台要求特定的 frontmatter 字段，可按平台文档补充，正文无需改动。
 
 ---
@@ -133,27 +148,29 @@ cp -r <仓库名>/research-paper-writing <你的项目>/.workbuddy/skills/
 
 ```text
 .
+├── SKILL.md                      # 合集总控（router）：按任务路由到 skills/ 下的子技能
 ├── README.md                     # 英文版（默认，GitHub 首页渲染）
 ├── README.cn.md                  # 中文版（本文件）
 ├── LICENSE                       # MIT 许可证
-├── research-paper-writing/       # 以下每个目录 = 一个独立 Skill
-│   ├── SKILL.md                  #   技能入口：触发条件 + 工作流
-│   ├── README.md                 #   技能详情页
-│   ├── references/               #   知识分片（分章节指南、清单、范例）
-│   └── scripts/                  #   可执行脚本（如稿件自检）
-├── academic-deai-writing/
-├── academic-paper-prompts/
-├── grant-proposal-ai/
-├── ai-research-methodology/
-├── critical-paper-reading/
-├── socratic-reading/
-├── zettelkasten-notes/
-├── research-copilot/
-├── graduate-research-career/
-├── ai-gongwen-writing/
-├── modern-thinking-toolkit/
-├── human-3-skill/
-└── output-escalation/
+└── skills/                       # 以下每个目录 = 一个独立 Skill
+    ├── research-paper-writing/
+    │   ├── SKILL.md              #   技能入口：触发条件 + 工作流
+    │   ├── README.md             #   技能详情页
+    │   ├── references/           #   知识分片（分章节指南、清单、范例）
+    │   └── scripts/              #   可执行脚本（如稿件自检）
+    ├── academic-deai-writing/
+    ├── academic-paper-prompts/
+    ├── grant-proposal-ai/
+    ├── ai-research-methodology/
+    ├── critical-paper-reading/
+    ├── socratic-reading/
+    ├── zettelkasten-notes/
+    ├── research-copilot/
+    ├── graduate-research-career/
+    ├── ai-gongwen-writing/
+    ├── modern-thinking-toolkit/
+    ├── human-3-skill/
+    └── output-escalation/
 ```
 
 ---

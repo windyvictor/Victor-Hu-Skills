@@ -10,6 +10,10 @@ This repository contains **14 Skills**, primarily written in Chinese, following 
 `SKILL.md + references/` layout. In principle they work on any Agent platform that supports
 this convention (WorkBuddy, Claude Code, Codex, and others).
 
+The root also carries a `SKILL.md`. It is a **collection router**: it holds no writing rules of
+its own and exists only to send the agent to the right sub-Skill under `skills/`. You can use
+the repository as one bundle, or take a single Skill out of it.
+
 ---
 
 ## Table of contents
@@ -51,35 +55,35 @@ These Skills share three characteristics:
 
 | Skill | One-line positioning | Core content |
 |---|---|---|
-| [research-paper-writing](./research-paper-writing/README.md) | The **end-to-end** workhorse for paper writing and literature reviews | Search & screening → critical reading → review drafting → topic & idea → section-by-section writing (Intro/Abstract/Method/Experiments/Related Work/Conclusion) → pre-submission self-audit → defense; includes a real-example library and a manuscript check script |
-| [academic-deai-writing](./academic-deai-writing/README.md) | Remove **AI traces / AIGC markers** from papers and grant proposals | Root-cause diagnosis, general rewriting, boilerplate cleanup, re-allocating word budget, plus section-specific treatment (Introduction/Results/Discussion/novelty) and English-specific rewriting |
-| [academic-paper-prompts](./academic-paper-prompts/README.md) | A **prompt library** for paper writing (copy and use) | 40 prompt schemes covering the full workflow + 30 English writing instructions; templates keep variable placeholders intact |
-| [grant-proposal-ai](./grant-proposal-ai/README.md) | A writing guide for **grant / research proposals** | Writing techniques for every section (rationale, research content, technical route, novelty, feasibility, budget) + 40 structured prompt templates |
-| [ai-research-methodology](./ai-research-methodology/README.md) | **Methodology and tool selection** for doing research with AI | Literature search, topic trends, data processing, experiment design and novelty mining, statistical modeling, figure generation, submission and revision; separate golden prompt sets for STEM and humanities |
+| [research-paper-writing](./skills/research-paper-writing/README.md) | The **end-to-end** workhorse for paper writing and literature reviews | Search & screening → critical reading → review drafting → topic & idea → section-by-section writing (Intro/Abstract/Method/Experiments/Related Work/Conclusion) → pre-submission self-audit → defense; includes a real-example library and a manuscript check script |
+| [academic-deai-writing](./skills/academic-deai-writing/README.md) | Remove **AI traces / AIGC markers** from papers and grant proposals | Root-cause diagnosis, general rewriting, boilerplate cleanup, re-allocating word budget, plus section-specific treatment (Introduction/Results/Discussion/novelty) and English-specific rewriting |
+| [academic-paper-prompts](./skills/academic-paper-prompts/README.md) | A **prompt library** for paper writing (copy and use) | 40 prompt schemes covering the full workflow + 30 English writing instructions; templates keep variable placeholders intact |
+| [grant-proposal-ai](./skills/grant-proposal-ai/README.md) | A writing guide for **grant / research proposals** | Writing techniques for every section (rationale, research content, technical route, novelty, feasibility, budget) + 40 structured prompt templates |
+| [ai-research-methodology](./skills/ai-research-methodology/README.md) | **Methodology and tool selection** for doing research with AI | Literature search, topic trends, data processing, experiment design and novelty mining, statistical modeling, figure generation, submission and revision; separate golden prompt sets for STEM and humanities |
 
 ### B. Literature reading and knowledge management
 
 | Skill | One-line positioning | Core content |
 |---|---|---|
-| [critical-paper-reading](./critical-paper-reading/README.md) | **Critical close reading** of one or many papers | Keshav's three-pass method + structured element extraction + a critical-thinking engine (question checklists, argument evaluation, research-gap identification); outputs a structured reading report |
-| [socratic-reading](./socratic-reading/README.md) | Read a book using the **Socratic questioning method** | Adler's four levels of reading (elementary/inspectional/analytical/syntopical) + a four-question chain + book selection and speed-reading output methods |
-| [zettelkasten-notes](./zettelkasten-notes/README.md) | The **Zettelkasten note-taking method** | Fleeting → literature → permanent notes + linking + index + review; solves "I take lots of notes but never write anything" |
+| [critical-paper-reading](./skills/critical-paper-reading/README.md) | **Critical close reading** of one or many papers | Keshav's three-pass method + structured element extraction + a critical-thinking engine (question checklists, argument evaluation, research-gap identification); outputs a structured reading report |
+| [socratic-reading](./skills/socratic-reading/README.md) | Read a book using the **Socratic questioning method** | Adler's four levels of reading (elementary/inspectional/analytical/syntopical) + a four-question chain + book selection and speed-reading output methods |
+| [zettelkasten-notes](./skills/zettelkasten-notes/README.md) | The **Zettelkasten note-taking method** | Fleeting → literature → permanent notes + linking + index + review; solves "I take lots of notes but never write anything" |
 
 ### C. Research collaboration and career development
 
 | Skill | One-line positioning | Core content |
 |---|---|---|
-| [research-copilot](./research-copilot/README.md) | A rigorous **research collaboration** entry point | Mathematical proofs and derivations, paper writing and review, literature surveys, novelty analysis, topic selection and method design, algorithms and numerical experiments, LaTeX; v2 adds a controlled-language layer (ASD-STE100 research-adapted edition + Chinese/English manuscript check scripts) |
-| [graduate-research-career](./graduate-research-career/README.md) | Guidance for **graduate study and academic careers** | Distilled from 20 research guides: onboarding, topic selection, reading literature, research habits, writing and publishing, advisor relations, research integrity, career choices; includes 6 fillable templates |
+| [research-copilot](./skills/research-copilot/README.md) | A rigorous **research collaboration** entry point | Mathematical proofs and derivations, paper writing and review, literature surveys, novelty analysis, topic selection and method design, algorithms and numerical experiments, LaTeX; v2 adds a controlled-language layer (ASD-STE100 research-adapted edition + Chinese/English manuscript check scripts) |
+| [graduate-research-career](./skills/graduate-research-career/README.md) | Guidance for **graduate study and academic careers** | Distilled from 20 research guides: onboarding, topic selection, reading literature, research habits, writing and publishing, advisor relations, research integrity, career choices; includes 6 fillable templates |
 
 ### D. Workplace writing and general thinking
 
 | Skill | One-line positioning | Core content |
 |---|---|---|
-| [ai-gongwen-writing](./ai-gongwen-writing/README.md) | A **Chinese official-document and workplace writing** library | 20+ official document types (notices, bulletins, meeting minutes, requests for instructions, summaries, research reports, leadership speeches…) and workplace genres (weekly reports, retrospectives, applications, public remarks, annual reviews); each with a writing formula + step-by-step prompts + final-draft self-check |
-| [modern-thinking-toolkit](./modern-thinking-toolkit/README.md) | A **modern thinking toolkit** (~320 models) | Decision algorithms, game theory, probability and Bayes, critical thinking, systems thinking, role-based mindsets, cognitive growth; automatically picks 1 primary and up to 3 supporting/counter tools and outputs conclusions, mechanisms, trade-offs, and actions |
-| [human-3-skill](./human-3-skill/README.md) | **HUMAN 3.0** personal development assessment | Through an adaptive interview, identifies development levels, lifestyle archetypes, cross-quadrant obstacles, and growth strategies across the mind / body / spirit / career quadrants |
-| [output-escalation](./output-escalation/README.md) | An **output escalation ladder** — pick the medium that costs the reader the least effort | Five rungs (controlled writing → diagrams → interactive HTML explainer → explainer video → discardable tool) + escalation/de-escalation criteria; includes a complete implementation of ASD-STE100 Simplified Technical English Issue 9 (53 rules + controlled dictionary + check scripts) |
+| [ai-gongwen-writing](./skills/ai-gongwen-writing/README.md) | A **Chinese official-document and workplace writing** library | 20+ official document types (notices, bulletins, meeting minutes, requests for instructions, summaries, research reports, leadership speeches…) and workplace genres (weekly reports, retrospectives, applications, public remarks, annual reviews); each with a writing formula + step-by-step prompts + final-draft self-check |
+| [modern-thinking-toolkit](./skills/modern-thinking-toolkit/README.md) | A **modern thinking toolkit** (~320 models) | Decision algorithms, game theory, probability and Bayes, critical thinking, systems thinking, role-based mindsets, cognitive growth; automatically picks 1 primary and up to 3 supporting/counter tools and outputs conclusions, mechanisms, trade-offs, and actions |
+| [human-3-skill](./skills/human-3-skill/README.md) | **HUMAN 3.0** personal development assessment | Through an adaptive interview, identifies development levels, lifestyle archetypes, cross-quadrant obstacles, and growth strategies across the mind / body / spirit / career quadrants |
+| [output-escalation](./skills/output-escalation/README.md) | An **output escalation ladder** — pick the medium that costs the reader the least effort | Five rungs (controlled writing → diagrams → interactive HTML explainer → explainer video → discardable tool) + escalation/de-escalation criteria; includes a complete implementation of ASD-STE100 Simplified Technical English Issue 9 (53 rules + controlled dictionary + check scripts) |
 
 ---
 
@@ -109,22 +113,32 @@ These Skills share three characteristics:
 
 Every Skill is a self-contained directory — just copy it in.
 
-**Option 1: Global install (recommended; available to all projects)**
+**Option 1: Install the whole bundle (all 14 Skills at once)**
+
+```bash
+git clone https://github.com/<your-username>/<repo-name>.git
+cp -r <repo-name> ~/.workbuddy/skills/research-skillbox
+```
+
+The root `SKILL.md` is the collection router; `skills/` holds the 14 sub-Skills. The platform
+loads the router first, then descends into `skills/` and registers all 14 sub-Skills.
+
+**Option 2: Install a single Skill (global; available to all projects)**
 
 ```bash
 git clone https://github.com/<your-username>/<repo-name>.git
 
 # Copy the Skills you need into your user-level skills directory
-cp -r <repo-name>/research-paper-writing ~/.workbuddy/skills/
-cp -r <repo-name>/critical-paper-reading  ~/.workbuddy/skills/
+cp -r <repo-name>/skills/research-paper-writing ~/.workbuddy/skills/
+cp -r <repo-name>/skills/critical-paper-reading  ~/.workbuddy/skills/
 # …copy as needed
 ```
 
-**Option 2: Project-level install (active in one project only; easier to share with a team)**
+**Option 3: Project-level install (active in one project only; easier to share with a team)**
 
 ```bash
 mkdir -p <your-project>/.workbuddy/skills
-cp -r <repo-name>/research-paper-writing <your-project>/.workbuddy/skills/
+cp -r <repo-name>/skills/research-paper-writing <your-project>/.workbuddy/skills/
 ```
 
 After installing, restart the Agent or reload Skills. They will then trigger automatically in
@@ -132,8 +146,11 @@ conversation, or you can invoke them by name (e.g. "use research-paper-writing t
 a literature review").
 
 > Layout convention: `SKILL.md` is the entry point, `references/` holds knowledge fragments,
-> `assets/` holds templates, and `scripts/` holds scripts. If your platform requires specific
-> frontmatter fields, add them per its documentation — the body needs no changes.
+> `assets/` holds templates, and `scripts/` holds scripts. **When installing the bundle, the
+> sub-Skills must sit under `skills/`**: most platforms descend only into that directory once a
+> `SKILL.md` is present at the parent level, so sub-Skills placed anywhere else will not be
+> registered automatically. If your platform requires specific frontmatter fields, add them per
+> its documentation — the body needs no changes.
 
 ---
 
@@ -141,27 +158,29 @@ a literature review").
 
 ```text
 .
+├── SKILL.md                      # Collection router: routes a task to a sub-Skill under skills/
 ├── README.md                     # English README (default, this file)
 ├── README.cn.md                  # Chinese README
 ├── LICENSE                       # MIT License
-├── research-paper-writing/       # Each directory below = one standalone Skill
-│   ├── SKILL.md                  #   Entry point: trigger conditions + workflow
-│   ├── README.md                 #   Skill detail page
-│   ├── references/               #   Knowledge fragments (section guides, checklists, examples)
-│   └── scripts/                  #   Executable scripts (e.g. manuscript self-check)
-├── academic-deai-writing/
-├── academic-paper-prompts/
-├── grant-proposal-ai/
-├── ai-research-methodology/
-├── critical-paper-reading/
-├── socratic-reading/
-├── zettelkasten-notes/
-├── research-copilot/
-├── graduate-research-career/
-├── ai-gongwen-writing/
-├── modern-thinking-toolkit/
-├── human-3-skill/
-└── output-escalation/
+└── skills/                       # Each directory below = one standalone Skill
+    ├── research-paper-writing/
+    │   ├── SKILL.md              #   Entry point: trigger conditions + workflow
+    │   ├── README.md             #   Skill detail page
+    │   ├── references/           #   Knowledge fragments (section guides, checklists, examples)
+    │   └── scripts/              #   Executable scripts (e.g. manuscript self-check)
+    ├── academic-deai-writing/
+    ├── academic-paper-prompts/
+    ├── grant-proposal-ai/
+    ├── ai-research-methodology/
+    ├── critical-paper-reading/
+    ├── socratic-reading/
+    ├── zettelkasten-notes/
+    ├── research-copilot/
+    ├── graduate-research-career/
+    ├── ai-gongwen-writing/
+    ├── modern-thinking-toolkit/
+    ├── human-3-skill/
+    └── output-escalation/
 ```
 
 ---
