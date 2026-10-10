@@ -10,9 +10,9 @@ license: MIT
 
 A bundled collection of **12 standalone research Skills**, gathered behind one entry point.
 
-> Ready-made paper-writing prompts (40 workflow schemes + 30 advanced English writing
+> Ready-made paper prompts (40 workflow schemes + 30 advanced English writing
 > instructions), kept verbatim for copy-and-paste use, live outside the Skills area in
-> [`prompt-library/paper-writing/`](./prompt-library/paper-writing/README.md). That folder
+> [`prompt-library/`](./prompt-library/README.md). That folder
 > has no `SKILL.md`, so it is distributed with the bundle but not registered as a Skill.
 
 ## What this Skill is

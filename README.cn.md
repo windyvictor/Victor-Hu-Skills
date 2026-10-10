@@ -9,9 +9,9 @@
 本仓库共收录 **12 个 Skill**，以中文为主，遵循通用的 `SKILL.md + references/` 目录规范，
 理论上可用于任何支持该规范的 Agent 平台（WorkBuddy / Claude Code / Codex 等）。
 
-技能之外，[`prompt-library/`](./prompt-library/paper-writing/README.md) 另存一套论文写作提示词
-（40 套全流程方案 + 30 条英文写作高级指令），原文保留、供直接复制粘贴使用。该目录不含
-`SKILL.md`，随仓库分发但**不注册为技能**。
+技能之外，[`prompt-library/`](./prompt-library/README.md) 另存一套论文提示词
+（40 套全流程方案 + 30 条英文写作高级指令），覆盖选题到投稿的全流程，原文保留、供直接
+复制粘贴使用。该目录不含 `SKILL.md`，随仓库分发但**不注册为技能**。
 
 根目录另有一份 `SKILL.md`，它是**合集总控（router）**：本身不含写作规则，只负责按任务把
 Agent 路由到 `skills/` 下对应的子技能。因此本仓库既可整包使用，也可只取其中单个技能。
@@ -90,7 +90,7 @@ Agent 路由到 `skills/` 下对应的子技能。因此本仓库既可整包使
 | 写文献综述、开题报告的综述部分 | `research-paper-writing` |
 | 一口气读懂一批论文、做文献矩阵 | `critical-paper-reading` + `research-paper-writing` |
 | 审稿人说我写得太像 AI、AIGC 率过高 | `academic-deai-writing` |
-| 想直接抄一套好用的论文写作提示词 | [`prompt-library/paper-writing/`](./prompt-library/paper-writing/README.md)（非技能，属参考资料） |
+| 想直接抄一套好用的论文提示词 | [`prompt-library/`](./prompt-library/README.md)（非技能，属参考资料） |
 | 要写基金 / 课题申报书 | `grant-proposal-ai` |
 | 想知道怎么用 AI 提升科研效率（工具、流程） | `ai-research-methodology` |
 | 想把读过的书变成能写作的素材 | `socratic-reading` → `zettelkasten-notes` |
@@ -154,7 +154,8 @@ cp -r <仓库名>/skills/research-paper-writing <你的项目>/.workbuddy/skills
 ├── README.cn.md                  # 中文版（本文件）
 ├── LICENSE                       # MIT 许可证
 ├── prompt-library/               # 非技能（无 SKILL.md），随仓库分发的参考资料
-│   └── paper-writing/            #   论文写作提示词原文集（40 套方案 + 30 条指令）
+│   ├── README.md                 #   索引、来源声明与使用原则
+│   └── *.md                      #   40 套提示词方案 + 30 条英文写作指令（原文）
 └── skills/                       # 以下每个目录 = 一个独立 Skill
     ├── research-paper-writing/
     │   ├── SKILL.md              #   技能入口：触发条件 + 工作流
@@ -208,7 +209,7 @@ cp -r <仓库名>/skills/research-paper-writing <你的项目>/.workbuddy/skills
 | 类型 | 说明 | 举例 |
 |---|---|---|
 | **① 提炼改写**（主体） | 方法要点的重新表述与结构重组，非原文照搬 | 各 Skill 的流程、规则、checklist；`output-escalation` / `research-copilot` 对 ASD-STE100 受控语言的功能性提炼 |
-| **② 原文引用**（均已标注来源） | 为保留原味或功能而保留的原句、提示词模板、句式库 | `modern-thinking-toolkit` 的「金句（第 N 讲）」、`prompt-library/paper-writing/` 的提示词原文集、`research-paper-writing` 的学术句式 |
+| **② 原文引用**（均已标注来源） | 为保留原味或功能而保留的原句、提示词模板、句式库 | `modern-thinking-toolkit` 的「金句（第 N 讲）」、`prompt-library/` 的提示词原文集、`research-paper-writing` 的学术句式 |
 | **③ 已知受版权约束的第三方素材** | 来源方明确限制再分发的素材，仓库已作显著提示 | `research-paper-writing` 引用的 *Academic Phrasebank*（曼彻斯特大学，仅授权个人使用、禁止电子再分发） |
 
 ### 引用规范

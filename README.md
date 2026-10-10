@@ -10,9 +10,10 @@ This repository contains **12 Skills**, primarily written in Chinese, following 
 `SKILL.md + references/` layout. In principle they work on any Agent platform that supports
 this convention (WorkBuddy, Claude Code, Codex, and others).
 
-Beyond the Skills, [`prompt-library/`](./prompt-library/paper-writing/README.md) holds a set of
-ready-made paper-writing prompts (40 workflow schemes + 30 advanced English writing
-instructions) kept verbatim, for copy-and-paste use. That folder carries no `SKILL.md`, so it
+Beyond the Skills, [`prompt-library/`](./prompt-library/README.md) holds a set of
+ready-made paper prompts (40 workflow schemes + 30 advanced English writing
+instructions) kept verbatim, for copy-and-paste use. They cover the whole paper lifecycle from
+topic selection to submission. That folder carries no `SKILL.md`, so it
 ships with the repository but is not registered as a Skill.
 
 The root also carries a `SKILL.md`. It is a **collection router**: it holds no writing rules of
@@ -98,7 +99,7 @@ These Skills share three characteristics:
 | Write a literature review or the review section of a proposal | `research-paper-writing` |
 | Read through a batch of papers and build a literature matrix | `critical-paper-reading` + `research-paper-writing` |
 | A reviewer says my writing sounds AI-generated; my AIGC score is too high | `academic-deai-writing` |
-| I just want a ready-made set of paper-writing prompts | [`prompt-library/paper-writing/`](./prompt-library/paper-writing/README.md) (not a Skill — reference material) |
+| I just want a ready-made set of paper-writing prompts | [`prompt-library/`](./prompt-library/README.md) (not a Skill — reference material) |
 | Write a grant or research proposal | `grant-proposal-ai` |
 | Learn how to use AI to boost research efficiency (tools, workflows) | `ai-research-methodology` |
 | Turn books I've read into material I can actually write with | `socratic-reading` → `zettelkasten-notes` |
@@ -165,7 +166,8 @@ a literature review").
 ├── README.cn.md                  # Chinese README
 ├── LICENSE                       # MIT License
 ├── prompt-library/               # Not a Skill (no SKILL.md) — distributed reference material
-│   └── paper-writing/            #   Verbatim paper-writing prompt sets (40 schemes + 30 instructions)
+│   ├── README.md                 #   Index, source notes, and usage rules
+│   └── *.md                      #   40 prompt schemes + 30 English writing instructions (verbatim)
 └── skills/                       # Each directory below = one standalone Skill
     ├── research-paper-writing/
     │   ├── SKILL.md              #   Entry point: trigger conditions + workflow
@@ -221,7 +223,7 @@ efficiency.
 | Category | Description | Examples |
 |---|---|---|
 | **① Distilled / rewritten** (the bulk) | Restatement and structural reorganization of key methods, not verbatim copying | The flows, rules, and checklists of each Skill; the functional distillation of ASD-STE100 controlled English in `output-escalation` / `research-copilot` |
-| **② Verbatim quotations** (all sources cited) | Original sentences, prompt templates, or phrase banks kept for authenticity or functionality | The "金句 (Lecture N)" quotes in `modern-thinking-toolkit`; the verbatim prompt sets in `prompt-library/paper-writing/`; the academic phrase bank in `research-paper-writing` |
+| **② Verbatim quotations** (all sources cited) | Original sentences, prompt templates, or phrase banks kept for authenticity or functionality | The "金句 (Lecture N)" quotes in `modern-thinking-toolkit`; the verbatim prompt sets in `prompt-library/`; the academic phrase bank in `research-paper-writing` |
 | **③ Third-party material under known copyright constraints** | Material whose owners explicitly restrict redistribution; such files carry prominent notices | *Academic Phrasebank* cited in `research-paper-writing` (University of Manchester — personal use only, electronic redistribution prohibited) |
 
 ### Citation conventions

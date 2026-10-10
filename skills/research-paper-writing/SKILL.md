@@ -162,4 +162,4 @@ python3 scripts/check_manuscript.py paper.md --json               # 供程序消
 - 2026-09-24 v4：**并入原 `literature-review` 技能**（九部综述方法论著作 + 6 份 references + 综合矩阵模板），新增任务路由 A0（综述完整流程）。
 - 2026-09-26 v5：**并入 GitHub Master-cai/Research-Paper-Writing-Skills（MIT，源自彭思达老师公开笔记）**：8 份分节写作指南（引言/摘要/方法/实验/相关工作/结论/对抗式自审/流畅度检查）+ 33 个文件的顶会真实范例库；新增反向提纲、主张-证据对照表、对抗式自审工作流与改写交付格式。
 - 2026-09-28 v6：**全文 OCR 并精读《芝加哥大学论文写作指南》（杜拉宾第 8 版中译本，508 页扫描版）**：新增 turabian-argument-craft.md（第一部分：难题陈述公式、warrant 五问、承认与回应、快速修订法、引言四要素/结论四件事）与 chicago-editing-style.md（第三部分编辑体例 + 附录：标点/数字/缩写/引文留痕/表格图版/学位论文格式）；任务 B/D 补入对应路由，"引用与诚信"类目扩为"引用、诚信与编辑体例"。
-- 2026-10-10 v7：原 `academic-paper-prompts` 技能（40 套提示词方案 + 30 条英文指令）拆解归并——新增 `references/readability-self-test.md`（可读性自测，源自方案 38），原文提示词集移出技能区、改存仓库根 `prompt-library/paper-writing/`。
+- 2026-10-10 v7：原 `academic-paper-prompts` 技能（40 套提示词方案 + 30 条英文指令）拆解归并——新增 `references/readability-self-test.md`（可读性自测，源自方案 38），原文提示词集移出技能区、改存仓库根 `prompt-library/`（2026-10-10 同日扁平化，原 `prompt-library/paper-writing/`）。

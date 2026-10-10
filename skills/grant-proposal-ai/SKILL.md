@@ -33,4 +33,4 @@ agent_created: true
 ## 配套技能
 
 - **`ai-research-methodology`** — 撰写"研究内容/技术路线"时若需梳理实验方案、数据方案、创新点挖掘，用其 `references/prompt-engineering-stem.md`（理工科）或 `prompt-engineering-humanities.md`（文科）中的实验设计、创新建模、实证分析模板。
-- **`academic-deai-writing`** — 申报书中涉及语言润色、去 AI 味时使用；需要直接复制粘贴的提示词原文时，见仓库 `prompt-library/paper-writing/`（资料，非技能）。
+- **`academic-deai-writing`** — 申报书中涉及语言润色、去 AI 味时使用；需要直接复制粘贴的提示词原文时，见仓库 `prompt-library/`（资料，非技能）。
