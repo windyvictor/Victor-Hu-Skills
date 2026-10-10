@@ -6,7 +6,7 @@
 > 覆盖 **读文献 → 想问题 → 做研究 → 写论文 → 报项目 → 建知识库** 的完整闭环，
 > 并附带公文职场写作与通识思维工具箱。
 
-本仓库共收录 **13 个 Skill**，以中文为主，遵循通用的 `SKILL.md + references/` 目录规范，
+本仓库共收录 **12 个 Skill**，以中文为主，遵循通用的 `SKILL.md + references/` 目录规范，
 理论上可用于任何支持该规范的 Agent 平台（WorkBuddy / Claude Code / Codex 等）。
 
 技能之外，[`prompt-library/`](./prompt-library/paper-writing/README.md) 另存一套论文写作提示词
@@ -78,7 +78,6 @@ Agent 路由到 `skills/` 下对应的子技能。因此本仓库既可整包使
 |---|---|---|
 | [ai-gongwen-writing](./skills/ai-gongwen-writing/README.md) | **公文与职场写作**技能库 | 20+ 公文文种（通知/通报/会议纪要/请示/总结/调研报告/领导讲话…）与职场文体（周报/复盘/申请/公开发言/年终总结），各含写作公式 + 分步提示词 + 成稿自检 |
 | [modern-thinking-toolkit](./skills/modern-thinking-toolkit/README.md) | **现代思维工具箱**（约 320 个模型） | 决策算法、博弈论、概率与贝叶斯、批判性思维、系统思维、角色思维、认知成长等，自动选 1 主 + ≤3 辅工具输出结论、机制、权衡与行动 |
-| [human-3-skill](./skills/human-3-skill/README.md) | **HUMAN 3.0** 个人发展评估 | 通过适应式面谈，从心智 / 身体 / 灵性 / 职业四象限识别发展层级、生活方式原型、跨象限阻碍与成长策略 |
 | [output-escalation](./skills/output-escalation/README.md) | **输出升维阶梯**——为消息选最省读者力气的介质 | 五级阶梯（受控文字 → 图表 → 交互网页 → 讲解视频 → 可丢弃小工具）+ 升维/降级判据；内置 ASD-STE100 受控英语 Issue 9 完整实现（53 条规则 + 受控词典 + 检查脚本） |
 
 ---
@@ -101,7 +100,6 @@ Agent 路由到 `skills/` 下对应的子技能。因此本仓库既可整包使
 | 把复杂的东西讲清楚：画图、做交互网页、做讲解视频 | `output-escalation` |
 | 写操作手册 / SOP / 安全规程，或检查稿件语言质量 | `output-escalation`（受控语言）+ `research-copilot`（语言体检脚本） |
 | 做复杂决策、分析一个乱局、找思维模型 | `modern-thinking-toolkit` |
-| 想系统复盘自己的生活在哪个象限出问题 | `human-3-skill` |
 
 ---
 
@@ -109,15 +107,15 @@ Agent 路由到 `skills/` 下对应的子技能。因此本仓库既可整包使
 
 每个 Skill 都是自包含的独立目录，直接复制即可使用。
 
-**方式一：整包安装（一次装齐 13 个技能）**
+**方式一：整包安装（一次装齐 12 个技能）**
 
 ```bash
 git clone https://github.com/<你的用户名>/<仓库名>.git
 cp -r <仓库名> ~/.workbuddy/skills/research-skillbox
 ```
 
-根目录的 `SKILL.md` 是合集总控，`skills/` 下是 13 个子技能。平台先加载总控，再下探 `skills/`
-子目录，把 13 个子技能一并注册。
+根目录的 `SKILL.md` 是合集总控，`skills/` 下是 12 个子技能。平台先加载总控，再下探 `skills/`
+子目录，把 12 个子技能一并注册。
 
 **方式二：单技能安装（全局，所有项目可用）**
 
@@ -173,7 +171,6 @@ cp -r <仓库名>/skills/research-paper-writing <你的项目>/.workbuddy/skills
     ├── graduate-research-career/
     ├── ai-gongwen-writing/
     ├── modern-thinking-toolkit/
-    ├── human-3-skill/
     └── output-escalation/
 ```
 

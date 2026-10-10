@@ -1,6 +1,6 @@
 ---
 name: research-skillbox
-description: "Use when the user asks for end-to-end help with academic research or scholarly writing — choosing a research topic, searching and screening literature, reading or critiquing a batch of papers, writing a literature review, drafting or revising a paper section (Introduction, Methods, Results, Discussion, Conclusion), preparing a grant or research proposal, removing AI-sounding phrasing from a manuscript, turning reading into literature notes, writing official documents (notices, meeting minutes, work reports), or deciding how to present a result as text, a diagram, an interactive page, or a video. 中文触发：读论文、写文献综述、论文写作与修改、开题报告、基金申请书/课题申报、去 AI 味、文献笔记、公文写作、把复杂问题讲清楚。Bundles 13 standalone research Skills and routes to the right one."
+description: "Use when the user asks for end-to-end help with academic research or scholarly writing — choosing a research topic, searching and screening literature, reading or critiquing a batch of papers, writing a literature review, drafting or revising a paper section (Introduction, Methods, Results, Discussion, Conclusion), preparing a grant or research proposal, removing AI-sounding phrasing from a manuscript, turning reading into literature notes, writing official documents (notices, meeting minutes, work reports), or deciding how to present a result as text, a diagram, an interactive page, or a video. 中文触发：读论文、写文献综述、论文写作与修改、开题报告、基金申请书/课题申报、去 AI 味、文献笔记、公文写作、把复杂问题讲清楚。Bundles 12 standalone research Skills and routes to the right one."
 version: 1.0.0
 author: Jin Hu
 license: MIT
@@ -8,7 +8,7 @@ license: MIT
 
 # Research Skillbox
 
-A bundled collection of **13 standalone research Skills**, gathered behind one entry point.
+A bundled collection of **12 standalone research Skills**, gathered behind one entry point.
 
 > Ready-made paper-writing prompts (40 workflow schemes + 30 advanced English writing
 > instructions), kept verbatim for copy-and-paste use, live outside the Skills area in
@@ -51,9 +51,8 @@ Do not answer the user's request from this file alone. This file only picks the 
 | Choose how to present a result — text, diagram, interactive page, or video | `skills/output-escalation/SKILL.md` |
 | Write an SOP, operations manual, or safety instruction; check manuscript language quality | `skills/output-escalation/SKILL.md` (controlled language), plus `skills/research-copilot/SKILL.md` (language check scripts) |
 | Reason through a complex decision or apply a thinking model | `skills/modern-thinking-toolkit/SKILL.md` |
-| Review which area of life is off track | `skills/human-3-skill/SKILL.md` |
 
-## The 13 Skills
+## The 12 Skills
 
 | Skill | What it covers |
 |---|---|
@@ -68,7 +67,6 @@ Do not answer the user's request from this file alone. This file only picks the 
 | `skills/graduate-research-career/` | Graduate study and academic career guidance distilled from 20 research guides, with 6 fillable templates |
 | `skills/ai-gongwen-writing/` | Official and workplace writing in Chinese: notices, bulletins, minutes, plans, summaries, reports, speeches, and more |
 | `skills/modern-thinking-toolkit/` | A toolkit of thinking models drawn from eight sources, for complex decisions and messy situations |
-| `skills/human-3-skill/` | A structured self-review of the three quadrants of life |
 | `skills/output-escalation/` | An output escalation ladder: controlled writing, diagrams, interactive HTML explainers, explainer video, discardable tools, plus the ASD-STE100 Issue 9 implementation |
 
 ## Composing Skills
@@ -82,7 +80,7 @@ Chain sub-Skills instead of running one pass that tries to do everything.
 
 ## Language note
 
-The 13 sub-Skills are written primarily in **Chinese**, and several are specific to Chinese
+The 12 sub-Skills are written primarily in **Chinese**, and several are specific to Chinese
 academic and official-document conventions. A sub-Skill's own file governs the language of its
 output. `research-paper-writing`, `research-copilot`, and `output-escalation` include
 English-facing rules as well.

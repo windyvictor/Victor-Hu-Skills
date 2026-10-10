@@ -6,7 +6,7 @@
 > It covers a complete loop — **read papers → think through problems → do research → write papers → apply for funding → build a knowledge base** —
 > plus official-document writing and a general thinking toolkit.
 
-This repository contains **13 Skills**, primarily written in Chinese, following the common
+This repository contains **12 Skills**, primarily written in Chinese, following the common
 `SKILL.md + references/` layout. In principle they work on any Agent platform that supports
 this convention (WorkBuddy, Claude Code, Codex, and others).
 
@@ -86,7 +86,6 @@ These Skills share three characteristics:
 |---|---|---|
 | [ai-gongwen-writing](./skills/ai-gongwen-writing/README.md) | A **Chinese official-document and workplace writing** library | 20+ official document types (notices, bulletins, meeting minutes, requests for instructions, summaries, research reports, leadership speeches…) and workplace genres (weekly reports, retrospectives, applications, public remarks, annual reviews); each with a writing formula + step-by-step prompts + final-draft self-check |
 | [modern-thinking-toolkit](./skills/modern-thinking-toolkit/README.md) | A **modern thinking toolkit** (~320 models) | Decision algorithms, game theory, probability and Bayes, critical thinking, systems thinking, role-based mindsets, cognitive growth; automatically picks 1 primary and up to 3 supporting/counter tools and outputs conclusions, mechanisms, trade-offs, and actions |
-| [human-3-skill](./skills/human-3-skill/README.md) | **HUMAN 3.0** personal development assessment | Through an adaptive interview, identifies development levels, lifestyle archetypes, cross-quadrant obstacles, and growth strategies across the mind / body / spirit / career quadrants |
 | [output-escalation](./skills/output-escalation/README.md) | An **output escalation ladder** — pick the medium that costs the reader the least effort | Five rungs (controlled writing → diagrams → interactive HTML explainer → explainer video → discardable tool) + escalation/de-escalation criteria; includes a complete implementation of ASD-STE100 Simplified Technical English Issue 9 (53 rules + controlled dictionary + check scripts) |
 
 ---
@@ -109,7 +108,6 @@ These Skills share three characteristics:
 | Explain something complex clearly: diagrams, an interactive webpage, an explainer video | `output-escalation` |
 | Write an operations manual / SOP / safety instructions, or check manuscript language quality | `output-escalation` (controlled language) + `research-copilot` (language check scripts) |
 | Make a complex decision, analyze a messy situation, find a mental model | `modern-thinking-toolkit` |
-| Systematically review which quadrant of my life is off track | `human-3-skill` |
 
 ---
 
@@ -117,15 +115,15 @@ These Skills share three characteristics:
 
 Every Skill is a self-contained directory — just copy it in.
 
-**Option 1: Install the whole bundle (all 13 Skills at once)**
+**Option 1: Install the whole bundle (all 12 Skills at once)**
 
 ```bash
 git clone https://github.com/<your-username>/<repo-name>.git
 cp -r <repo-name> ~/.workbuddy/skills/research-skillbox
 ```
 
-The root `SKILL.md` is the collection router; `skills/` holds the 13 sub-Skills. The platform
-loads the router first, then descends into `skills/` and registers all 13 sub-Skills.
+The root `SKILL.md` is the collection router; `skills/` holds the 12 sub-Skills. The platform
+loads the router first, then descends into `skills/` and registers all 12 sub-Skills.
 
 **Option 2: Install a single Skill (global; available to all projects)**
 
@@ -184,7 +182,6 @@ a literature review").
     ├── graduate-research-career/
     ├── ai-gongwen-writing/
     ├── modern-thinking-toolkit/
-    ├── human-3-skill/
     └── output-escalation/
 ```
 
