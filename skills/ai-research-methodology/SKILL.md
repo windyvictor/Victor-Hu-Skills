@@ -19,8 +19,8 @@ agent_created: true
 | 工具选型（"哪个 AI 适合做文献综述/统计分析/写作？"） | `references/methodology-guides.md` 第 1 章（按文献、假设、统计、写作四环节选工具） |
 | 科研全流程设计（"帮我设计 AI 辅助科研工作流"） | `references/methodology-guides.md` 第 2 章（七步工作流 + 五项原则） |
 | 具体环节怎么用 ChatGPT（初稿、润色、审稿反驳、实验核查） | `references/methodology-guides.md` 第 3、4 章（含英文 prompt 原文） |
-| **理工科**：文献检索、数据预处理与特征工程、实验设计、创新建模、AI Code 构建/改进 Baseline、消融实验、论文图表 | `references/prompt-engineering-stem.md`（12 场景 + 7 个代码提示词，模板原文） |
-| **文科**：文献检索、量表检验与 CMB、因果识别（DID/IV/RDD/PSM）、中介调节、质性编码、文献计量（CiteSpace/VOSviewer）、PRISMA 系统综述、稳健性检验 | `references/prompt-engineering-humanities.md`（12 场景 + 7 个实战模板，模板原文） |
+| **理工科**：文献检索、数据预处理与特征工程、实验设计、创新建模、AI Code 构建/改进 Baseline、消融实验、论文图表 | `references/prompt-engineering-stem.md`（8 环节 + 7 个代码提示词，模板原文） |
+| **文科**：文献检索、量表检验与 CMB、因果识别（DID/IV/RDD/PSM）、中介调节、质性编码、文献计量（CiteSpace/VOSviewer）、PRISMA 系统综述、稳健性检验 | `references/prompt-engineering-humanities.md`（8 环节 + 7 个实战模板，模板原文） |
 | 论文写作层的方法论与去 AI 味（润色、降 AIGC、查重、可读性自测） | 转入配套技能 `academic-deai-writing`（去 AI 味）与 `research-paper-writing`（可读性自测、修改 Checklist） |
 | 需要可直接复制粘贴的网络流传提示词原文（40 套方案 + 30 条英文指令） | 仓库 `prompt-library/paper-writing/`（资料，非技能） |
 | 课题申报书写作 | 转入配套技能 `grant-proposal-ai` |
@@ -39,5 +39,5 @@ agent_created: true
 ## 详细资料（references/）
 
 - `methodology-guides.md` — 四份方法论指南的完整提炼：工具清单、七步科研工作流、全阶段 prompt 模板、学术诚信注意事项。
-- `prompt-engineering-stem.md` — 理工科手册提炼：12 场景黄金提示词 + AI Code 构建 Baseline（3 场景）+ 改进 Baseline（4 策略：结构改进/训练策略/可视化/消融自动化）+ 全流程检查清单。
-- `prompt-engineering-humanities.md` — 文科手册提炼：12 场景黄金提示词 + 实证分析（问卷量表/因果推断/质性编码）+ 文献计量与 PRISMA 系统综述（4 策略）+ 稳健性检验清单。
+- `prompt-engineering-stem.md` — 理工科手册提炼：8 环节黄金提示词（写作与润色类转配套技能）+ AI Code 构建 Baseline（3 场景）+ 改进 Baseline（4 策略：结构改进/训练策略/可视化/消融自动化）+ 全流程检查清单。
+- `prompt-engineering-humanities.md` — 文科手册提炼：8 环节黄金提示词（写作与润色类转配套技能）+ 实证分析（问卷量表/因果推断/质性编码）+ 文献计量与 PRISMA 系统综述（4 策略）+ 稳健性检验清单。
