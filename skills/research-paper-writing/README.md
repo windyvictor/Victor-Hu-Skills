@@ -20,7 +20,7 @@
 写文献综述 / 综述章节 / 开题报告综述 / 研究背景梳理；检索与精读文献；整理文献矩阵；
 确定研究方向或 idea；设计顶会顶刊实验；撰写或润色论文；逐节重写 Introduction /
 Abstract / Method / Experiments / Related Work / Conclusion；检查段落衔接与逻辑流畅度；
-claim-evidence 对齐检查；投稿前对抗式自审；回应审稿人；准备答辩。
+可读性自测；claim-evidence 对齐检查；投稿前对抗式自审；回应审稿人；准备答辩。
 
 ## 内容结构
 
@@ -46,6 +46,7 @@ research-paper-writing/
 │   ├── thesis-and-defense.md         # 学位论文与答辩
 │   ├── paper-review.md / habits-and-pitfalls.md
 │   ├── does-my-writing-flow-source.md
+│   ├── readability-self-test.md      # 可读性自测（读者视角）
 │   └── examples/                     # 真实范例库（引言 13 版 / 方法 / 摘要 3 版）
 ├── assets/
 │   └── synthesis-matrix-template.md  # 文献综合矩阵模板
@@ -56,7 +57,8 @@ research-paper-writing/
 ## 参考资料 / 灵感来源
 
 > 本节逐条列明参考来源、作者与借鉴内容，供追溯与致谢。
-> 本技能为下列材料的**结构化整理、改写与再组织**，不含原书原文的大段复制。
+> 本技能为下列材料的**结构化整理、改写与再组织**；少量功能性文本（学术句式、可读性自测提示词）
+> 为**原文引用并已标注来源**，见下表。
 > 相关权利归原作者与出版方所有；如有疏漏或异议，欢迎提 Issue 指出，我们会立即调整或删除。
 
 ### A. 论文结构与论证
@@ -126,12 +128,22 @@ research-paper-writing/
 | 公开学习笔记 | 彭思达（北京大学），github.com/pengsida/learning_research | 引言/摘要/方法/实验/相关工作/结论的分节实战指南与真实范例（含 13 版引言范例） |
 | Research-Paper-Writing-Skills | Master-cai（MIT License） | 上述笔记的结构化整理，2026-09-26 并入本技能 |
 
-### G. 本项目自研部分
+### G. 可读性自测（原文引用的提示词）
+
+| 来源 | 作者 / 出处 | 借鉴内容 |
+|---|---|---|
+| 《40 套 AI 提示词》方案 38 | **原始作者与出版信息未标注**（网络流传资料） | 用"不熟悉领域的读者 / 评审专家"视角自测可读性的 4 条提示词（**原文引用**），见 `references/readability-self-test.md` |
+
+> ⚠️ 该来源为未标注作者的网络流传资料，版权状态不明。提示词为功能性文本，按原文引用并标注来源，
+> 本仓库不主张任何权利；如您是原始作者并希望署名或移除，请通过 Issue 联系，我们将立即处理。
+
+### H. 本项目自研部分
 
 | 内容 | 作者 | 说明 |
 |---|---|---|
 | `scripts/check_manuscript.py` 稿件自检脚本 | 本项目作者 | 投稿前格式与规范自检 |
 | 全流程工作流设计、文件组织与路由逻辑 | 本项目作者 | 将上述材料组织为可执行的 Skill 结构 |
+| `readability-self-test.md` 的流程编排与使用边界 | 本项目作者 | 将方案 38 的提示词组织为可执行的自测流程 |
 
 ## 典型用法
 

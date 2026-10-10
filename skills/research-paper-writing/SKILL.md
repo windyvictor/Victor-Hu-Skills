@@ -1,6 +1,6 @@
 ---
 name: research-paper-writing
-description: 科研论文写作与文献综述全流程技能（2026-09-24 由 literature-review 技能并入合并，2026-09-26 并入 ML/CV 顶会分节写作指南，2026-09-28 并入杜拉宾 8 版中译本精读）。提炼自 21 本经典论文写作指南（Turabian 9th 英文版 + 芝加哥大学论文写作指南第 8 版中译本全文精读、Ten Simple Rules、How to Write a Lot、Academic Phrasebank、中国学生英语论文常见错误、文再文、图灵学术系列四册等）+ 9 部文献综述方法论著作（Machi & McEvoy 六步法、Creswell 五步、Foss & Walter 六步、Pautasso 十条规则、Ridley 批判性阅读与综合矩阵等）+ 彭思达顶会写作笔记（分节实战指南与真实范例库）+ 1 个稿件自检脚本。覆盖：文献检索与筛选、批判性精读、综述撰写与修改、选题与 Idea、实验设计、逐节写作（引言/摘要/方法/实验/相关工作/结论各有专属指南与句式骨架）、主张-证据对齐、反向提纲与对抗式自审、引用与学术诚信、英语表达、学位论文与答辩、投稿与审稿。当用户请求以下任务时应使用本 skill：写文献综述/综述章节/开题报告综述/研究背景梳理、检索与精读文献、整理文献矩阵、确定研究方向或 idea、设计顶会顶刊实验、撰写或润色科研论文、逐节重写 Introduction/Abstract/Method/Experiments/Related Work/Conclusion、检查段落衔接与逻辑流畅度、claim-evidence 对齐检查、投稿前对抗式自审、写摘要/引言/讨论/结论、检查引用格式与抄袭风险、投稿前稿件自检、准备答辩、克服写作障碍、回应审稿意见。触发词如"写文献综述""综述怎么写""帮我读这批文献""文献太多怎么组织""研究背景怎么写""难题陈述公式""怎么论证这个问题值得做""帮我找 idea""怎么设计实验""帮我写论文""重写 Introduction""摘要再打磨一下""这段读起来顺不顺""检查一下主张有没有证据支撑""数字缩写格式对不对""表格格式规范""投稿前帮我审一遍""润色这段英文""引言怎么写""参考文献格式""回应审稿人""答辩准备"等。
+description: 科研论文写作与文献综述全流程技能（2026-09-24 由 literature-review 技能并入合并，2026-09-26 并入 ML/CV 顶会分节写作指南，2026-09-28 并入杜拉宾 8 版中译本精读）。提炼自 21 本经典论文写作指南（Turabian 9th 英文版 + 芝加哥大学论文写作指南第 8 版中译本全文精读、Ten Simple Rules、How to Write a Lot、Academic Phrasebank、中国学生英语论文常见错误、文再文、图灵学术系列四册等）+ 9 部文献综述方法论著作（Machi & McEvoy 六步法、Creswell 五步、Foss & Walter 六步、Pautasso 十条规则、Ridley 批判性阅读与综合矩阵等）+ 彭思达顶会写作笔记（分节实战指南与真实范例库）+ 1 个稿件自检脚本。覆盖：文献检索与筛选、批判性精读、综述撰写与修改、选题与 Idea、实验设计、逐节写作（引言/摘要/方法/实验/相关工作/结论各有专属指南与句式骨架）、主张-证据对齐、反向提纲与对抗式自审、引用与学术诚信、英语表达、学位论文与答辩、投稿与审稿。当用户请求以下任务时应使用本 skill：写文献综述/综述章节/开题报告综述/研究背景梳理、检索与精读文献、整理文献矩阵、确定研究方向或 idea、设计顶会顶刊实验、撰写或润色科研论文、逐节重写 Introduction/Abstract/Method/Experiments/Related Work/Conclusion、检查段落衔接与逻辑流畅度、claim-evidence 对齐检查、投稿前对抗式自审、写摘要/引言/讨论/结论、检查引用格式与抄袭风险、投稿前稿件自检、准备答辩、克服写作障碍、回应审稿意见。触发词如"写文献综述""综述怎么写""帮我读这批文献""文献太多怎么组织""研究背景怎么写""难题陈述公式""怎么论证这个问题值得做""帮我找 idea""怎么设计实验""帮我写论文""重写 Introduction""摘要再打磨一下""这段读起来顺不顺""可读性自测""检查一下主张有没有证据支撑""数字缩写格式对不对""表格格式规范""投稿前帮我审一遍""润色这段英文""引言怎么写""参考文献格式""回应审稿人""答辩准备"等。
 agent_created: true
 ---
 
@@ -47,7 +47,7 @@ agent_created: true
 ### 任务 C：润色英文段落/全文
 
 1. 先做结构检查（主题句、C-C-C、一句一主题），再做语言检查。
-2. **段落流畅度专项检查**（用户问"这段顺不顺/清不清楚"时）：按 references/does-my-writing-flow-source.md 执行——读者视角四问 → **反向提纲**（写出主旨句→各段主题句→各段证据，检查映射关系，映射不上的段落改写或删除）→ 必要时加临时小标题与过渡词定位断点，定稿前删掉。
+2. **段落流畅度专项检查**（用户问"这段顺不顺/清不清楚"时）：按 references/does-my-writing-flow-source.md 执行——读者视角四问 → **反向提纲**（写出主旨句→各段主题句→各段证据，检查映射关系，映射不上的段落改写或删除）→ 必要时加临时小标题与过渡词定位断点，定稿前删掉。需要外部读者视角时改用 references/readability-self-test.md 的可读性自测（AI 扮演不熟悉该领域的读者，产出问题清单后逐条判断是"缺解释""逻辑断裂"还是模型自身知识不足）。
 3. 语言层面重点排查中国学生高频错误：冠词、时态、单复数、respectively、which/that、In this paper/study 混用——逐条对照 references/habits-and-pitfalls.md 的"错误→正确"示例清单。
 4. 需要改写句式时，按交际功能从 references/academic-english-phrases.md（基础 8 类）与 references/phrasebank-extended.md（定义/分类/趋势/因果/对比/举例/批判/过渡/图表/摘要/局限）选取匹配句式，投稿信与审稿回复句式也在后者；并遵守时态规则与 hedging 原则。
 5. 改写他人观点时：句法+词汇双重重组 + 注明出处，避免 mosaic plagiarism。
@@ -98,6 +98,7 @@ agent_created: true
 | `references/conclusion.md` | 结论写作指南 | 写/改结论 |
 | `references/paper-review.md` | 对抗式自审：主张-证据硬约束、常见拒稿五维信号表、五维终稿自审问题清单、adversarial workflow | 投稿前终审 |
 | `references/does-my-writing-flow-source.md` | "写作是否流畅"检查法：读者视角四问、反向提纲、临时小标题法、过渡词分类表 | 段落/章节流畅度检查 |
+| `references/readability-self-test.md` | 可读性自测：把"找个人读一遍"变成可执行流程——AI 扮演不熟悉该领域的读者，就研究背景 / 综述 / 结论产出问题清单；含 4 条原文提示词与使用边界 | 自查"读者能不能读懂"时 |
 | `references/examples/`（33 个文件） | 真实顶会论文范例库：引言 12 种写法实例、摘要 3 模板实例、方法章模块三要素实例（Instant-NGP/NeuralBody 等），入口 `examples/index.md` | 写对应章节时对照范例 |
 | **综述方法（中文方法论体系）** | | |
 | `references/literature-review-workflow.md` | 综述七阶段操作主流程 + 核心认知六条 + 常见错误速查 13 项（原 literature-review 技能主文件） | 写任何综述任务的第一站 |
@@ -139,6 +140,7 @@ python3 scripts/check_manuscript.py paper.md --json               # 供程序消
 - **逐节写作/改写**时，第一站加载对应分节指南（introduction/abstract/method/experiments/related-work/conclusion），需要实例时再翻 `references/examples/` 对应子目录；**一次只加载当前要写的那一节**，不要全量加载。
 - **主张-证据对齐是硬约束**：摘要与引言的每个主张必须有实验证据支撑，改写交付必须附 Claim-Evidence 对照表。
 - **判断"顺不顺"**用反向提纲法（does-my-writing-flow-source.md），不要凭语感。
+- **自查"读不读得懂"**用可读性自测（readability-self-test.md）：让 AI 扮演不熟悉该领域的读者，指出术语未解释、逻辑断裂、结论过宽之处。它产出问题清单而非改稿，且不得据此新增原文没有的事实、数据或机制。
 - 涉及**写综述/综述章节/开题报告综述**的任务，第一步读 literature-review-workflow.md，按七阶段推进；论证框架查 machi-six-steps.md，模型选型查 methodology-models.md，结构模板与常见错误查 structure-and-pitfalls.md。
 - 涉及**文献检索/精读/整理**的任务，查 literature-reading-and-synthesis.md（英文体系）与 critical-reading-writing.md（批判性清单），矩阵直接套用 assets/synthesis-matrix-template.md。
 - 涉及**选源与文献分层**的任务，查 source-selection.md 与 source-types-and-citation.md。
@@ -160,3 +162,4 @@ python3 scripts/check_manuscript.py paper.md --json               # 供程序消
 - 2026-09-24 v4：**并入原 `literature-review` 技能**（九部综述方法论著作 + 6 份 references + 综合矩阵模板），新增任务路由 A0（综述完整流程）。
 - 2026-09-26 v5：**并入 GitHub Master-cai/Research-Paper-Writing-Skills（MIT，源自彭思达老师公开笔记）**：8 份分节写作指南（引言/摘要/方法/实验/相关工作/结论/对抗式自审/流畅度检查）+ 33 个文件的顶会真实范例库；新增反向提纲、主张-证据对照表、对抗式自审工作流与改写交付格式。
 - 2026-09-28 v6：**全文 OCR 并精读《芝加哥大学论文写作指南》（杜拉宾第 8 版中译本，508 页扫描版）**：新增 turabian-argument-craft.md（第一部分：难题陈述公式、warrant 五问、承认与回应、快速修订法、引言四要素/结论四件事）与 chicago-editing-style.md（第三部分编辑体例 + 附录：标点/数字/缩写/引文留痕/表格图版/学位论文格式）；任务 B/D 补入对应路由，"引用与诚信"类目扩为"引用、诚信与编辑体例"。
+- 2026-10-10 v7：原 `academic-paper-prompts` 技能（40 套提示词方案 + 30 条英文指令）拆解归并——新增 `references/readability-self-test.md`（可读性自测，源自方案 38），原文提示词集移出技能区、改存仓库根 `prompt-library/paper-writing/`。

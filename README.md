@@ -6,9 +6,14 @@
 > It covers a complete loop — **read papers → think through problems → do research → write papers → apply for funding → build a knowledge base** —
 > plus official-document writing and a general thinking toolkit.
 
-This repository contains **14 Skills**, primarily written in Chinese, following the common
+This repository contains **13 Skills**, primarily written in Chinese, following the common
 `SKILL.md + references/` layout. In principle they work on any Agent platform that supports
 this convention (WorkBuddy, Claude Code, Codex, and others).
+
+Beyond the Skills, [`prompt-library/`](./prompt-library/paper-writing/README.md) holds a set of
+ready-made paper-writing prompts (40 workflow schemes + 30 advanced English writing
+instructions) kept verbatim, for copy-and-paste use. That folder carries no `SKILL.md`, so it
+ships with the repository but is not registered as a Skill.
 
 The root also carries a `SKILL.md`. It is a **collection router**: it holds no writing rules of
 its own and exists only to send the agent to the right sub-Skill under `skills/`. You can use
@@ -57,7 +62,6 @@ These Skills share three characteristics:
 |---|---|---|
 | [research-paper-writing](./skills/research-paper-writing/README.md) | The **end-to-end** workhorse for paper writing and literature reviews | Search & screening → critical reading → review drafting → topic & idea → section-by-section writing (Intro/Abstract/Method/Experiments/Related Work/Conclusion) → pre-submission self-audit → defense; includes a real-example library and a manuscript check script |
 | [academic-deai-writing](./skills/academic-deai-writing/README.md) | Remove **AI traces / AIGC markers** from papers and grant proposals | Root-cause diagnosis, general rewriting, boilerplate cleanup, re-allocating word budget, plus section-specific treatment (Introduction/Results/Discussion/novelty) and English-specific rewriting |
-| [academic-paper-prompts](./skills/academic-paper-prompts/README.md) | A **prompt library** for paper writing (copy and use) | 40 prompt schemes covering the full workflow + 30 English writing instructions; templates keep variable placeholders intact |
 | [grant-proposal-ai](./skills/grant-proposal-ai/README.md) | A writing guide for **grant / research proposals** | Writing techniques for every section (rationale, research content, technical route, novelty, feasibility, budget) + 40 structured prompt templates |
 | [ai-research-methodology](./skills/ai-research-methodology/README.md) | **Methodology and tool selection** for doing research with AI | Literature search, topic trends, data processing, experiment design and novelty mining, statistical modeling, figure generation, submission and revision; separate golden prompt sets for STEM and humanities |
 
@@ -95,7 +99,7 @@ These Skills share three characteristics:
 | Write a literature review or the review section of a proposal | `research-paper-writing` |
 | Read through a batch of papers and build a literature matrix | `critical-paper-reading` + `research-paper-writing` |
 | A reviewer says my writing sounds AI-generated; my AIGC score is too high | `academic-deai-writing` |
-| I just want a ready-made set of paper-writing prompts | `academic-paper-prompts` |
+| I just want a ready-made set of paper-writing prompts | [`prompt-library/paper-writing/`](./prompt-library/paper-writing/README.md) (not a Skill — reference material) |
 | Write a grant or research proposal | `grant-proposal-ai` |
 | Learn how to use AI to boost research efficiency (tools, workflows) | `ai-research-methodology` |
 | Turn books I've read into material I can actually write with | `socratic-reading` → `zettelkasten-notes` |
@@ -113,15 +117,15 @@ These Skills share three characteristics:
 
 Every Skill is a self-contained directory — just copy it in.
 
-**Option 1: Install the whole bundle (all 14 Skills at once)**
+**Option 1: Install the whole bundle (all 13 Skills at once)**
 
 ```bash
 git clone https://github.com/<your-username>/<repo-name>.git
 cp -r <repo-name> ~/.workbuddy/skills/research-skillbox
 ```
 
-The root `SKILL.md` is the collection router; `skills/` holds the 14 sub-Skills. The platform
-loads the router first, then descends into `skills/` and registers all 14 sub-Skills.
+The root `SKILL.md` is the collection router; `skills/` holds the 13 sub-Skills. The platform
+loads the router first, then descends into `skills/` and registers all 13 sub-Skills.
 
 **Option 2: Install a single Skill (global; available to all projects)**
 
@@ -162,6 +166,8 @@ a literature review").
 ├── README.md                     # English README (default, this file)
 ├── README.cn.md                  # Chinese README
 ├── LICENSE                       # MIT License
+├── prompt-library/               # Not a Skill (no SKILL.md) — distributed reference material
+│   └── paper-writing/            #   Verbatim paper-writing prompt sets (40 schemes + 30 instructions)
 └── skills/                       # Each directory below = one standalone Skill
     ├── research-paper-writing/
     │   ├── SKILL.md              #   Entry point: trigger conditions + workflow
@@ -169,7 +175,6 @@ a literature review").
     │   ├── references/           #   Knowledge fragments (section guides, checklists, examples)
     │   └── scripts/              #   Executable scripts (e.g. manuscript self-check)
     ├── academic-deai-writing/
-    ├── academic-paper-prompts/
     ├── grant-proposal-ai/
     ├── ai-research-methodology/
     ├── critical-paper-reading/
@@ -219,7 +224,7 @@ efficiency.
 | Category | Description | Examples |
 |---|---|---|
 | **① Distilled / rewritten** (the bulk) | Restatement and structural reorganization of key methods, not verbatim copying | The flows, rules, and checklists of each Skill; the functional distillation of ASD-STE100 controlled English in `output-escalation` / `research-copilot` |
-| **② Verbatim quotations** (all sources cited) | Original sentences, prompt templates, or phrase banks kept for authenticity or functionality | The "金句 (Lecture N)" quotes in `modern-thinking-toolkit`; the prompt templates in `academic-paper-prompts`; the academic phrase bank in `research-paper-writing` |
+| **② Verbatim quotations** (all sources cited) | Original sentences, prompt templates, or phrase banks kept for authenticity or functionality | The "金句 (Lecture N)" quotes in `modern-thinking-toolkit`; the verbatim prompt sets in `prompt-library/paper-writing/`; the academic phrase bank in `research-paper-writing` |
 | **③ Third-party material under known copyright constraints** | Material whose owners explicitly restrict redistribution; such files carry prominent notices | *Academic Phrasebank* cited in `research-paper-writing` (University of Manchester — personal use only, electronic redistribution prohibited) |
 
 ### Citation conventions
